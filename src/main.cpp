@@ -9,7 +9,6 @@ void setup()
 
   lcd.init();
   lcd.backlight();
-  lcd.setCursor(0, 0);
 }
 
 void loop()
@@ -18,7 +17,6 @@ void loop()
   {
     // read the incoming byte:
     char ch = (char)Serial.read();
-    auto str = String(ch);
     Serial.print(ch);
 
     if (ch == '[')
